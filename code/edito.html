@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            color: wheat;
+        }
+
+        body::-webkit-scrollbar {
+         display: none;
+         }
+
+        #third {
+            display: block;
+        }
+
+        .head h1 {
+            margin-left: 5rem;
+            margin-top: 1.4rem;
+        }
+
+        #back-button a {
+            position: absolute;
+            top: 6rem;
+            right: 6rem;
+            background-color: #006D77;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        @media (width<=750px) {
+            #back-button a {
+                top: 0;
+                right: 0;
+            }
+
+        }
+
+        #image-container4 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo"><span>Blog</span>Bharat</div>
+            <div id="nav-links">
+                <a href="./index.html">home</a>
+                <a href="./index.html">about</a>
+                <a href="./index.html">blog</a>
+                <a href="#fivth">contact</a>
+            </div>
+            <div class="btn">
+                <button id="sign-in">
+                    <a href="./sign.html">Sign In</a>
+                </button>
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="third">
+            <div class="head">
+                <h1 style="color:#006D77; font-size: 3rem; margin-bottom: 1.3rem;">All<span style="color:white;">
+                        Blog</span> Post Here</h1>
+            </div>
+            <div id="image-container3">
+                <div class="blog-card1 cards">
+                    <img src="https://images.ctfassets.net/2pyx8rwuvz6x/3knDevh2zRQsxXbuFP1gzE/46f60c7233e7f68b085265938c4e2490/2024_Holiday_Shopping_Newsroom_Header__1_.png?fm=webp&q=85&w=1680&h=1680"
+                        alt="">
+                    <p>Why Pinterest is the go-to place to shop for festive gifts this year</p>
+                    <button>Read More..</button>
+                    <button id="Delete">Delete</button>
+                </div>
+
+                <div class="blog-card2 cards">
+                    <img src="https://images.ctfassets.net/2pyx8rwuvz6x/4qrqt1rIgqarSJxSAYKICJ/28f7746cff4266a1a60fc225c2bdb81a/Presents-Newsroom_header-04.png?fm=webp&q=85&w=1680&h=1680"
+                        alt="">
+                    <p>Why Pinterest is the go-to place to shop for festive gifts this year</p>
+                    <button>Read More..</button>
+                    <button id="Delete">Delete</button>
+                </div>
+
+
+                <div class="blog-card3 cards">
+                    <img src="https://images.ctfassets.net/2pyx8rwuvz6x/7cBjCHbKCJNPoxd6mlzLgR/d9715c31a1d500075a6847522a125b9c/HeaderImage_Remix__1___1_.png?fm=webp&q=85&w=1680&h=1680"
+                        alt="">
+                    <p>Why Pinterest is the go-to place to shop for festive gifts this year</p>
+                    <button>Read More..</button>
+                    <button id="Delete">Delete</button>
+                </div>
+            </div>
+        </section>
+
+        <button style="color: white;" id="back-button"><a href="./index.html">Back</a></button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

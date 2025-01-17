@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        form input {
+            box-shadow: 2px 2px 10px rgb(165, 46, 46);
+        }
+
+        #back-button a {
+            position: absolute;
+            top: 2rem;
+            right: 16rem;
+            background-color: #006D77;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            box-shadow: 8px 8px 30px #006D77;
+        }
+
+        #backbutton {
+            display: none;
+            font-size: 2rem;
+            background-color: #006D77;
+            color: white;
+            border-radius: 1rem;
+        }
+
+        @media (width<=750px) {
+            #back-button a {
+                top: 0;
+                right: 0;
+            }
+
+            #back-button {
+                display: none;
+                text-align: center;
+            }
+
+            #backbutton {
+                display: block;
+                width: 60%;
+                margin-top: 2rem;
+                padding: 1rem;
+                border-style: none;
+                box-shadow: 2px 4px 20px white;
+            }
+
+            #backbutton a {
+                text-decoration: none;
+                color: white;
+
+            }
+
+            @media (width<650px) {
+                form input {
+                    margin-top: 0.7rem;
+                    margin-bottom: 13px;
+                }
+
+            }
+
+        }
+    </style>
+</head>
+
+<body style="background-color: black; color: white; height: 100vh; width: 100vw;">
+
+    <div class="signIn form"
+        style="color:white; border:2px solid rgb(160, 157, 144); width: 80%; margin: auto; height: 100vh; overflow-y: scroll;">
+        <button style="color: white;" id="back-button"><a href="./index.html">Back</a></button>
+        <form action="">
+            <h1>Please Sign In Your Account.😊</h1><br><br>
+            <label for="Email" class="sign-Email">Email</label>
+            <input type="email" placeholder="Enter Your Email" id="Email">
+
+            <label for="Password" class="sign-Password">Password</label>
+            <input type="password" placeholder="Enter your Password" id="Password">
+
+            <button id="CreateAccount"
+                style="cursor: pointer; background-color:aquamarine; padding: 1rem; border-radius: 1rem; border-style: none; box-shadow: 1px 2px 20px yellow; margin-top: 2rem; "><a
+                    href="./create.html"
+                    style="list-style: none; text-decoration: none; font-size: 20px; color: rgb(130, 85, 85);">Create
+                    Account</a>
+            </button>
+            <button id="signIn"
+                style="cursor: pointer; background-color:aquamarine; padding: 1rem; border-radius: 1rem; border-style: none; box-shadow: 1px 2px 20px yellow; margin-top: 2rem;">
+                <a onclick="signIn()"
+                    style="list-style: none; text-decoration: none; font-size: 20px; color: rgb(130, 85, 85);">Sign In
+                    Account</a>
+            </button>
+            <button style="color: white;" id="backbutton"><a href="./index.html">Back</a></button>
+        </form>
+    </div>
+
+    <script src="script.js">
+        function signIn() {
+            const Email = document.getElementById("Email").value;
+            const Password = document.getElementById("Password").value;
+
+            alert(`Sign In with Email:${Email} and Password:${Password}`);
+        }
+    </script>
+</body>
+
+</html>
