@@ -49,19 +49,23 @@
     <header>
         <nav>
             <div id="logo"><span>Blog</span>Bharat</div>
-            <div id="nav-links">
-                <a href="#first">home</a>
-                <a href="#second">about</a>
-                <a href="#third">blog</a>
-                <a href="#fivth">contact</a>
-            </div>
+            <!-- <div> -->
+            <ul id="nav-links">
+                <li><a href="#first">home</a></li>
+                <li><a href="#second">about</a></li>
+                <li><a href="#third">blog</a></li>
+                <li><a href="#fivth">contact</a></li>
+                <li><a href="#sixth">social</a></li>
+            </ul>
+        <!-- </div> -->
+
             <div class="btn">
-                <button id="sign-in">
-                    <a href="./sign.html">Sign In</a></button>
+                <button id="sign-in"><a href="./sign.html">Sign In</a></button>
                 <button id="create"><a href="#forth">CreateBlog</a></button>
             </div>
+
             <div class="bar">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
             </div>
         </nav>
     </header>
@@ -252,20 +256,22 @@
         </section>
     </main>
 
-    <footer>
-        <div id="footer-container">
-            <h2>BHARAT KUMAR MAGNARAM</h2>
-            <P>copy write @2025 not allow to copy some content and style. 😊</P>
-            <div class="social-links">
-                <img src="../assets/LinkedIn3 - Copy.png" alt="linkdin">
-                <a href="https://www.linkedin.com/in/bharat41web/">Linkedin</a>
-                <img src="../assets/youtube3.png" alt="youtube">
-                <a href="https://www.youtube.com/@rajyuvcooking">Youtube</a>
-                <img src="../assets/github-go-removebg-preview.png" alt="" class="github">
-                <a href="https://github.com/cs-bharat">Github</a>
+    <section id="sixth">
+        <footer>
+            <div id="footer-container">
+                <h2>BHARAT KUMAR MAGNARAM</h2>
+                <P>copy write @2025 not allow to copy some content and style. 😊</P>
+                <div class="social-links">
+                    <img src="../assets/LinkedIn3 - Copy.png" alt="linkdin">
+                    <a href="https://www.linkedin.com/in/bharat41web/">Linkedin</a>
+                    <img src="../assets/youtube3.png" alt="youtube">
+                    <a href="https://www.youtube.com/@rajyuvcooking">Youtube</a>
+                    <img src="../assets/github-go-removebg-preview.png" alt="" class="github">
+                    <a href="https://github.com/cs-bharat">Github</a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </section>
 
     <script src="script.js"></script>
 </body>

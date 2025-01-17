@@ -11,11 +11,23 @@ let images = Math.floor(Math.random()*array.length);
 // console.log(images);
 const writeBlogButton = document.getElementById('create');
 const editor = document.getElementById('editor');
-const boldButton = document.getElementById('boldButton');
-const italicButton = document.getElementById('italicButton');
+// const boldButton = document.getElementById('boldButton');
+// const italicButton = document.getElementById('italicButton');
 const colorInput = document.getElementById('colorInput');
 const postButton = document.getElementById('postButton');
 const blogList = document.getElementById('image-container3');
+
+
+let menuList = document.getElementById("nav-links");
+menuList.style.maxHeight = "0px";
+
+function toggleMenu(){
+  if(menuList.style.maxHeight == "0px"){
+    menuList.style.maxHeight = "400px";
+  }else{
+    menuList.style.maxHeight = "0px";
+  }
+}
 
 // Open the blog editor //
 writeBlogButton.addEventListener('click', () => {
@@ -50,13 +62,13 @@ postButton.addEventListener("click", () => {
   let blogcontent = document.getElementById("contentEditable").innerText;
   // console.log(blogcontent);
   if (blogcontent.trim() === '') {
-    alert("Cannot post An Empty Blog.. Please Write a Blog.");
+    alert("Cannot post An Empty Blog..🧑‍💻 Please Write a Blog.");
     return;
   }
 
   let TitleBlog = document.getElementById("title-blog").value;
   if(TitleBlog.trim() === "" ){
-    alert("Plese Blog Title Is Add.");
+    alert("Plese Blog Title Is Add.🙂");
     return;
   }
   // console.log(TitleBlog);

@@ -24,6 +24,8 @@ nav{
     font-size: 1.4rem;
     margin: 1rem;
     padding: 1rem;
+    position: relative;
+    height: 70px;
 }
 
 #logo>span{
@@ -38,16 +40,20 @@ nav{
     font-weight: 800;
 }
 
-#nav-links{
+nav ul{
     width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-#nav-links a{
-    text-decoration: none;
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
     color: #83C5BE;
     font-weight:600;
+    text-decoration: none;
 }
 .btn{
     display:flex;
@@ -79,25 +85,75 @@ nav{
 nav .bar{
      display: none;
 }
-@media (width<=750px) {
-    #nav-links a{
-        display: none;
+@media (width<=850px) {
+    nav .btn{
+        margin-left: 1rem;
+        margin-right: 2rem;
     }
-    nav .bar{
-        display: block;
+    nav .btn button a{
+        font-size: 1rem;
+    }
+    nav ul li{
+        margin-bottom: 2rem;
+        margin-top: 1rem;
     }
 
+    nav ul{
+        position:absolute;
+        top: 7rem;
+        margin-top: 4rem;
+        flex-direction: column;
+        background-color: #006D77;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        z-index: 99;
+    }
+
+    nav .bar{
+        display: block;
+        /* position: absolute;
+        right: 1rem; */
+    }
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .btn button{
-        display: none;
+    #nav-links{
+        transition: all 0.73s;
     }
 }
 
+@media (width<=550px) {
+    nav .btn{
+        position:absolute;
+        top: 8rem;
+        z-index: 1;
+        /* bottom: 0; */
+    }
+
+    nav .btn button a{
+       font-size: 1rem;
+    }
+
+    nav .btn button{
+        padding: 4px;
+        margin-top: 10px;
+    }
+    
+    nav #logo{
+        position: absolute;
+        left: 0;
+        font-size: 2rem;
+       }
+       nav .bar{
+        display: block;
+        position: absolute;
+        right: 1rem;
+    }
+}
 /* main section */
 main{
     width: 90%;
@@ -110,6 +166,7 @@ main{
   overflow-x: scroll;
   border-radius: 1rem;
   box-shadow: 1px 1px 20px #006D77;
+  position: relative;
 }
 
 #image-container1 img{
